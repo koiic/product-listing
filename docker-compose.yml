@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  api:
+    container_name: api
+    restart: always
+    build: .
+    environment:
+      - DATABASE_URL=mongodb://mongo:27017/product-listing
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    volumes:
+      - db_data:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  db_data: ~
