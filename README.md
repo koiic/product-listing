@@ -12,13 +12,10 @@ A ProductListing Rest API
 - [x] Users(Admin) can delete product
 - [x] Users can register/login
 
-## Root Endpoint(Hosted on Heroku)
-
-[http://localhost:3000/]
 
 ## API Endpoint
 
-[http://localhost:3000/api/products]
+[http://localhost:3000/]
 
 
 
